@@ -1,0 +1,115 @@
+body {
+    min-height: 100vh;
+    background-color: #1e2025;
+    background-image: linear-gradient(to right, transparent, rgba(0, 167, 244, 0.059));
+}
+
+* {
+    font-size: 1.1rem;
+}
+
+footer {
+    width: 95%;
+}
+
+#page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.logo {
+    margin: 0;
+    padding: 0;
+}
+
+#login-card {
+    display: flex;
+    background-color:#1c1d22;
+    box-shadow: rgba(0, 0, 0, 0.207) 4px 3px 3px -1px, rgba(24, 27, 34, 0.125) 2px 3px 5px -5px;
+    color:white;
+    width: 50%;
+    padding: 3.5rem;
+    border-radius: 1.5rem;
+}
+
+#forgot-password:hover {
+    opacity: 1;
+}
+
+#login-card input {
+    color:white;
+    background-color: rgba(255, 255, 255, 0.071);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.273);
+    border-right: none;
+    border-radius: 0.4rem;
+    margin-block: 0.5rem;
+    padding: 0.8rem;
+    width: auto;
+    transition: 0.4s;
+}
+
+#login-card input:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(223, 180, 255);
+}
+
+#form-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.lbl-checkbox {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color:white;
+    font-weight: 300;
+    transition: 0.4s;
+}
+
+div.icon-btn {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.7rem;
+    margin-right: 0.2rem;
+    align-items: center;
+}
+  
+#form-login input[type=checkbox] {
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: 0.15rem solid white;
+    border-radius: 0.2rem;
+}
+
+#form-login input[type=checkbox]:checked {
+    background: rgb(156, 80, 228) url("/assets/imgs/checkmark-icon.png") no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+#forgot-password {
+    color:rgb(163, 18, 231);
+    width: fit-content;
+    opacity: 0.8;
+    transition: 0.4s;
+}
+
+#btn-login, #btn-cadastro {
+    width: 100%;
+    height: 3.5rem;
+    margin-block: 0.5rem;
+}
+
+#btn-login {
+    background-color: rgb(175, 80, 247);
+    box-shadow: rgba(0, 0, 0, 0.207) 4px 3px 3px -1px, rgba(24, 27, 34, 0.125) 2px 3px 5px -5px;
+}

@@ -1,0 +1,498 @@
+body {
+    background-image: none;
+    background-color: #1e2025;
+}
+
+#page-container {
+    display: flex;
+    min-height: 100vh;
+    width: auto;
+}
+
+footer {
+    margin-top: 50vh;
+}
+
+input:focus {
+    outline: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    background-color: #16171b;
+    width: 7.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    margin: 0;
+    padding: 0;
+}
+
+#home-menu {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    list-style-type: none;
+}
+
+.home-menu-item {
+    color:rgb(255, 255, 255);
+    opacity: 0.6;
+    padding-block: 1.2rem;
+    border-radius: 3rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.home-menu-item:hover, .delete-icon:hover, #collaborators-div:hover {
+    opacity: 1;
+}
+
+.music:hover, .selected-music:hover, #playlist-card:hover {
+    transform: scale(1.025);
+}
+
+.home-menu-item:active {
+    opacity: 0.8;
+    transform: scale(0.95);
+}
+
+.home-menu-item a {
+    text-decoration: none;
+}
+
+.home-menu-item a h2 {
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.home-menu-item img {
+    height: 2rem;
+    padding-inline: 1.8rem;
+    transition: all .2s ease-in-out;
+}
+
+#barra-pesquisa {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 60%;
+    height: 4rem;
+    background-color: #86c0ff17;
+    border-radius: 2rem;
+    margin-inline: 2rem;
+    border: none;
+}
+
+#form-pesquisa {
+    width: 100%;
+    vertical-align: middle;
+}
+
+#input-pesquisa {
+    font-size: 1.4rem;
+    width: 100%;
+    vertical-align: middle;
+    background: none;
+    border: none;
+    color: white;
+}
+
+#input-pesquisa::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+#search-icon {
+    height: 1.5rem;
+    padding-inline: 1rem;
+}
+
+#btn-reload {
+    display: none;
+    margin-inline: 0.8rem;
+}
+
+#home-content {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2rem;
+    border-radius: 2rem;
+}
+
+div #home-content h2 {
+    display: flex;
+    height: 3.3rem;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+#home-content h2 {
+    font-weight: bold;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    padding-inline: 4rem;
+    align-items: center;
+    height: 7rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#user-img {
+    padding-right: 1.2rem;
+    height: 4.5rem;
+}
+
+#username {
+    align-self: center;
+    font-size: 1.2rem;
+}
+
+#musics-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding-inline: 2rem;
+    min-width: 50%;
+}
+
+#div-tophits {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1.2rem
+}
+
+#grid-musics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.2rem;
+}
+
+.music {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 18rem;
+    min-width: 12.5rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    box-shadow:rgba(0, 0, 0, 0.256) 4px 3px 3px -1px, rgba(24, 27, 34, 0.19) 2px 3px 5px -5px;
+    border-radius: 1rem;
+    transition: 0.4s;
+}
+
+.music * {
+    font-size: 0.9rem;
+}
+
+.music-default {
+    background-color: #16171b;
+}
+
+.music-default:hover {
+    background-image: linear-gradient(75deg, rgb(140, 0, 155) 20%, rgb(127, 53, 181) 40%, rgb(91, 127, 181) 100%);
+}
+
+.music-selected {
+    background-image: linear-gradient(75deg, rgb(140, 0, 155) 20%, rgb(127, 53, 181) 40%, rgb(91, 127, 181) 100%);
+}
+
+.mnome {
+    font-weight: bold;
+    padding-block: 0.5rem;
+}
+
+.mcantor, .mduracao {
+    opacity: 0.5;
+}
+
+.mcapa {
+    width: 75%;
+    align-self: center;
+    padding: 1rem;
+}
+
+.mnome-duracao {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mduracao {
+    margin-left: 1rem;
+    align-self: left;
+    float: left;
+}
+
+
+#playlist-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+    padding-inline: 2rem;
+    padding-top: 4.4rem;
+}
+
+#playlist-card {
+    padding: 2.5rem;
+    display: none;
+    text-align: right;
+    background-color: #16171b;
+    box-shadow:rgba(0, 0, 0, 0.256) 4px 3px 3px -1px, rgba(24, 27, 34, 0.19) 2px 3px 5px -5px;
+    border-radius: 1rem;
+    transition: 0.2s;
+}
+
+#playlist-form {
+    padding-block: 1rem;
+}
+
+#playlist-form label {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    padding-bottom: 0.6rem;
+}
+
+#dropdown-genero {
+    border: none;
+    width: 10rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    text-align: left;
+    padding-inline: 1rem;
+    color: rgb(194, 194, 194);
+    background-color: #1e1f22;
+    box-shadow:rgba(0, 0, 0, 0.256) 4px 3px 3px -1px, rgba(24, 27, 34, 0.19) 2px 3px 5px -5px;
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+
+#dropdown-genero:hover, #dropdown-genero:active {
+    background-color: #1c1d20;
+}
+
+#dropdown-genero option {
+    background-color: #1e1f22;
+}
+
+#nome-playlist, #add-collaborators {
+    width: 17rem;
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: white;
+    background: none;
+    border: none;
+}
+
+#playlist-duracao {
+    padding-top: 0.5rem;
+    opacity: 0.5;
+    text-align: left;
+}
+
+#btn-play {
+    cursor:auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 5rem;
+    border: none;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+#btn-play.playable {
+    background-color: rgb(145, 65, 206);
+    opacity: 0.8;
+}
+
+#btn-play.playable:hover {
+    opacity: 1;
+    transform: scale(1.1); 
+}
+
+#btn-play.non-playable {
+    background-color: rgb(137, 137, 137);
+    opacity: 0.5;
+}
+
+#btn-play.non-playable:hover {
+    transform: scale(1.0); 
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    padding: 0;
+}
+
+#checkbox-favorite {
+    background: transparent url("/assets/imgs/favorite-icon.png") no-repeat;
+    background-size: cover;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+}
+
+#checkbox-favorite:checked {
+    background: transparent url("/assets/imgs/favorite-icon-filled.png") no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+#checkbox-access {
+    background: transparent url("/assets/imgs/public-icon.png") no-repeat;
+    background-size: cover;
+    border: none;
+    height: 1.8rem;
+    width: 1.8rem;
+}
+
+#checkbox-access:checked {
+    background: transparent url("/assets/imgs/private-icon.png") no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+#collaborators-div {
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.visible {
+    display: inline;
+}
+
+.invisible {
+    display: none;
+}
+
+.selected-music {
+    display: flex;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    height: 4rem;
+    background-color: rgba(192, 210, 255, 0.02);
+    border-radius: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.207) 4px 3px 3px -1px, rgba(24, 27, 34, 0.125) 2px 3px 5px -5px;
+    transition: 0.4s;
+}
+
+.selected-music div {  
+    width: 100%;
+}
+
+.selected-capa {
+    height: 4.2rem;
+}
+
+.delete-icon {
+    height: 1.5rem;
+    padding-top: 1rem;
+    position: relative;
+    float: right;
+    opacity: 0.3;
+    transition: 0.2s;
+}
+
+.selected-nome-duracao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.music-info {
+    margin-left: 1.5rem;
+}
+
+/* Nome da música */
+.music-info h4 {
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+
+/* Artista e duração */
+.music-info p, .selected-duration {
+    opacity: 0.5;
+    text-align: left;
+}
+
+.icon-btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn-div p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.icon-btn-div img {
+    height: 1.2rem;
+    padding-right: 0.5rem;
+}
+
+#btn-adicionar {
+    display: none;
+    background-color: rgb(145, 65, 206);
+    width: auto;
+    padding-inline: 1.2rem;
+}
+
+#btn-concluir {
+    color: rgb(174, 91, 237);
+    margin-right: 0.8rem;
+}
+
+#btn-salvar-playlist {
+    display: none;
+    background-color: #ffffff0c;
+    color: rgb(183, 115, 236);
+    box-shadow: rgba(0, 0, 0, 0.256) 4px 3px 3px -1px, rgba(24, 27, 34, 0.19) 2px 3px 5px -5px;
+    margin-top: 2rem;
+}
+
+#btn-limpar {
+    display: none;
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+
+#btn-newplaylist {
+    position: fixed;
+    align-self: center;
+    margin-top: 5rem;
+    background-color: rgb(214, 160, 255);
+}
+
+.hidden, .btn-selecao {
+    display: none;
+}
+
+.btn-selecao {
+    appearance: none;
+    border-radius: 4rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background: transparent;
+    border: 0.15rem solid white;
+    font-size: 1;
+}

@@ -1,0 +1,226 @@
+:root {
+    font-size: 1.8vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: white;
+}
+
+body {
+    width: 100%;
+    background-color: #1e2025;
+    background-image: linear-gradient(to right, transparent, rgba(0, 167, 244, 0.075));
+}
+
+button, .lbl-checkbox, .icon-btn, .icon-btn * {
+    cursor: pointer;
+}
+
+#site-background {
+    display: flex;
+    background-image: url("/assets/imgs/home-background.png");
+    background-repeat: no-repeat;
+    background-size: 90rem;
+    background-position-x: right;
+    background-position-y: -3rem;
+}
+
+.icon-btn {
+    height: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+.icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.121);
+}
+
+.btn-high-emphasis, .btn-low-emphasis, .btn-extended-fab, .icon-btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.8;
+    transition: all .2s ease-in-out; 
+}
+
+.btn-extended-fab {
+    width: fit-content;
+    padding: 1.8rem;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.256) 4px 3px 3px -1px, rgba(24, 27, 34, 0.19) 2px 3px 5px -5px;
+}
+
+.btn-extended-fab p {
+    color: #24252a;
+}
+
+.btn-high-emphasis, .btn-low-emphasis {
+    width: 8.8rem;
+    height: 3.3rem;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.btn-low-emphasis {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-high-emphasis {
+    border: none;
+    color:  #24252a;
+}
+
+.text-btn {
+    border: none;
+    box-shadow: none;
+}
+
+.btn-high-emphasis:hover, .btn-low-emphasis:hover, .btn-extended-fab:hover {
+    opacity: 1;
+}
+
+.btn-low-emphasis:hover {
+    background-color: rgba(255, 255, 255, 0.096);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 4rem;
+    padding-top: 1rem;
+    width: fit-content;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo * {
+    font-size: 2.2rem;
+}
+
+.logo img {
+    height: 3rem;
+}
+
+.logo h1 {
+    color:white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+.logo span {
+    font-weight: 300;
+}
+
+#page-content {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background: transparent;
+    font-weight: thin;
+    font-size: 2.3rem;
+    color:white;
+}
+
+#body-content h2 {
+    font-weight: bold;
+    font-size: 4.8rem;
+    text-align: left;
+}
+
+#body-container {
+    text-align: center;
+    vertical-align: center;
+    padding-top: 1rem;
+}
+
+#body-content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45rem;
+}
+
+#body-content {
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    margin-left: 10rem;
+}
+
+#login-btn {
+    background-color: rgb(175, 80, 247);
+}
+
+#comecar-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 0.5rem;
+    background-color: white;
+}
+
+#contato-container {
+    background-color: #16171b;
+    height: 15rem;
+    min-width: fit-content;
+    padding: 3rem;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+
+#contato-container div {
+    margin-inline: 2.5rem;
+    margin-block: 1.5rem;
+}
+
+#contato-container p, #contato-container h2 {
+    font-size: 1.1rem;
+}
+
+#contato-container h2 {
+    margin-bottom: 0.6rem;
+}
+
+img.contato-option {
+    margin-inline: 0.6rem;
+    height: 3rem;
+}
+
+#contato-container p img {
+    margin-right: 1rem;
+    height: 2rem;
+}
+
+p.contato-option {
+    display: flex;
+}
+
+.contato-option {
+    opacity: 0.5;
+}
+
+.contato-option:hover {
+    opacity: 1;
+}
+
+#contato-container div.logo {
+    margin-inline: 0;
+}
+
+#contato-container div.logo img {
+    height: 2.5rem;
+}
+
+#contato-container div.logo h1 {
+    font-size: 2rem;
+}
